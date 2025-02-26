@@ -1,0 +1,4146 @@
+/* 69px to 320px */
+@media (min-width: 69px) and (max-width: 320px) {
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: #fff;
+  }
+
+  *::selection {
+    background-color: #fff;
+    color: #95c11e;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    cursor: none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  body::-webkit-scrollbar {
+    display: block;
+    width: 6px;
+    background: #95c11e;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 50px;
+  }
+
+  /* Navbar */
+  #nav {
+    height: 50px!important;  /* Reduced height for small screens */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 2px!important;  /* Further reduced padding */
+    gap: 10px !important;  /* Minimized gap */
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 999;
+  }
+
+  #nav img {
+    height: 12vw !important;  /* Further reduced logo size */
+  }
+
+  #nav h4 {
+    font-size: 2.5vw!important;  /* Smaller font size for nav links */
+    text-align: center !important;
+  }
+
+  /* Cursor Effects */
+  #cursor {
+    height: 10px;  /* Tiny cursor */
+    width: 10px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+  }
+
+  #cursor-blur {
+    height: 100px;  /* Smaller blur effect */
+    width: 100px;
+    background-color: #96c11e6e;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(20px);
+    z-index: 9;
+  }
+
+  /* Video Background */
+  video {
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Main Section */
+  #main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Page 1 */
+  #page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+  }
+
+  #page1 h1 {
+    font-size: 11vw;  /* Further reduced font size */
+    font-weight: 900;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  #page1 h1::before {
+    content: "Eat. Drink. Play.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    z-index: -1;
+    -webkit-text-stroke: 1px rgba(172, 255, 47, 0.616);
+  }
+
+  #page1 h4 {
+    font-size: 1rem;  /* Smaller font size */
+    line-height: 1.66;
+    letter-spacing: 0.02em;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  #page1 p {
+    font-size: 10px;  /* Adjusted font size */
+    font-weight: 400;
+    position: relative;
+    max-width: 20rem;  /* Further reduced max-width */
+  }
+
+  #page1 #arrow {
+    height: 50px!important;
+    width: 50px!important;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    left: -3%;
+    bottom: 0%;
+    overflow: hidden;
+    border: 2px solid #89b218;
+    transition: all ease-in 0.5s;
+    z-index: -111;
+  }
+
+  #page1 #arrow:hover {
+    scale: 0.5;
+    background-color: #95c11e;
+  }
+
+  #page1 #arrow i {
+    font-size: 25px;
+    font-weight: 500;
+    z-index: -111;
+  }
+
+  /* Page 2 */
+  #scroller #scroller-in h4{
+    font-size: 35px!important;  /* Adjusted font size for small screens */
+  }
+
+  #page2 {
+    min-height: 70vh;
+    width: 100%;
+    z-index: 10;
+  }
+
+  /* Scroller */
+  #scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 100;
+    padding: 5px 0px!important;
+    margin: 5px 0px!important;
+  }
+
+  #scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  #scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 10s;  /* Faster scroll for small screens */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  #scroller h4 {
+    display: inline-block;
+    font-size: 45px;  /* Adjusted font size */
+    font-weight: 900;
+    font-family: sans-serif;
+    margin-right: 10px;
+    transition: all linear 0.4s;
+    color: #000;
+    -webkit-text-stroke: 2px #f8f0ee;
+  }
+
+  #scroller-in > h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* About Us Section */
+  #about-us {
+    height: 40vh!important;  /* Further reduced height */
+    width: 100%!important;
+    padding: 0 2px !important;  /* Further reduced padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 10;
+  }
+
+  #about-us img {
+    height: 80px!important;  /* Smaller image size */
+    width: 70px!important;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  #about-us-in {
+    width: 60%!important;
+    text-align: center;
+    letter-spacing: 0.2cap;
+  }
+
+  #about-us-in h2 {
+    font-size: 16px!important;  /* Adjusted heading size */
+    font-weight: 900;
+    margin-bottom: 15px;
+  }
+
+  #about-us-in p {
+    font-size: 6px!important;  /* Smaller font size */
+    line-height: 8px!important;
+  }
+
+  /* Cards Container */
+  #cards-container {
+    height: 20vh!important;  /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;  /* Further reduced gap */
+    position: relative;
+    z-index: 101;
+  }
+
+  .card {
+    height: 80%;
+    width: 20%;  /* Adjusted width */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    z-index: 99;
+  }
+
+  #card1 {
+    background-image: url(../img/card1.jpg);
+  }
+
+  #card2 {
+    background-image: url(../img/card2.jpg);
+  }
+
+  #card3 {
+    background-image: url(../img/card3.jpg);
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #99ca1b;
+    padding: 10px;
+    opacity: 0;
+    transition: all ease 1s;
+    z-index: 99;
+  }
+
+  .overlay h2 {
+    color: #000;
+  }
+
+  .overlay p {
+    color: #000;
+    line-height: 16px;
+  }
+
+  .overlay:hover {
+    opacity: 1;
+  }
+
+  .card:hover {
+    transform: rotate3d(-1, 1, 0, 15deg);
+  }
+
+  /* Green Div */
+  #green-div {
+    height: 10vh;  /* Adjusted height */
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #a8da21, #42ac2e);
+  }
+
+  #green-div h3 {
+    width: 35% !important;
+    font-size: 12px!important;  /* Reduced font size */
+    line-height: 15px !important;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+  }
+
+  #green-div img {
+    height: 80%;
+    width: 12%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  /* Page 3 */
+  #page3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;  /* Adjusted padding */
+    position: relative;
+  }
+
+  #page3 p {
+    font-size: 8px!important;  /* Smaller font size */
+    width: 90% !important;
+    font-weight: 500;
+    line-height: 18px!important;
+    margin-bottom: 8px;
+  }
+
+  #page3 img {
+    height: 30px;  /* Further reduced image size */
+    width: 30px;
+    object-fit: contain;
+  }
+
+  #page3 #colon1 {
+    left: 5%!important;
+    top: 10%!important;
+  }
+
+  #page3 #colon2 {
+    right: 5%!important;
+    bottom: 10%!important;
+  }
+
+  #page4 h1 {
+    font-size: 15px!important;  /* Adjusted font size */
+  }
+
+  .elem h2 {
+    text-align: center !important;
+    font-size: 10px !important;
+  }
+
+  /* Footer */
+  #footer {
+    height: 20vh !important;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px !important;  /* Adjusted padding */
+    gap: 0.5vw;  /* Reduced gap */
+    align-items: center;
+    background-color: #95c11e;
+    padding-bottom: 5px;
+  }
+
+  #f2 h3, #f3 h3, #f4 h4 {
+    font-size: 0.7vw!important; 
+    line-height: 6px!important; /* Smaller font size */
+  }
+
+  .tnc p {
+    font-size: 3px!important;  /* Slightly smaller font size */
+  }
+}
+
+
+/* 321px to 375px */
+@media (min-width: 321px) and (max-width: 375px) {
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: #fff;
+  }
+
+  *::selection {
+    background-color: #fff;
+    color: #95c11e;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    cursor: none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #95c11e;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 50px;
+  }
+
+  /* Navbar */
+  #nav {
+    height: 60px!important;  /* Adjusted height for very small screens */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 5px!important;  /* Reduced padding */
+    gap: 15px !important;  /* Reduced gap */
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 999;
+  }
+
+  #nav img {
+    height: 10vw !important;  /* Even smaller logo */
+  }
+
+  #nav h4 {
+    font-size: 2vw!important;  /* Adjusted font size for nav links */
+    text-align: center !important;
+  }
+
+  /* Cursor Effects */
+  #cursor {
+    height: 14px;  /* Smaller cursor */
+    width: 14px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+  }
+
+  #cursor-blur {
+    height: 140px;  /* Smaller blur effect */
+    width: 140px;
+    background-color: #96c11e6e;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(30px);
+    z-index: 9;
+  }
+
+  /* Video Background */
+  video {
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Main Section */
+  #main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Page 1 */
+  #page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+  }
+
+  #page1 h1 {
+    font-size: 9vw;  /* Reduced font size */
+    font-weight: 900;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  #page1 h1::before {
+    content: "Eat. Drink. Play.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    z-index: -1;
+    -webkit-text-stroke: 1px rgba(172, 255, 47, 0.616);
+  }
+
+  #page1 h4 {
+    font-size: 1.2rem;  /* Smaller font size */
+    line-height: 1.66;
+    letter-spacing: 0.02em;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  #page1 p {
+    font-size: 11px;  /* Adjusted font size */
+    font-weight: 400;
+    position: relative;
+    max-width: 26rem;  /* Adjusted max-width */
+  }
+
+  #page1 #arrow {
+    height: 60px!important;
+    width: 60px!important;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    left: -3%;
+    bottom: 0%;
+    overflow: hidden;
+    border: 2px solid #89b218;
+    transition: all ease-in 0.5s;
+    z-index: -111;
+  }
+
+  #page1 #arrow:hover {
+    scale: 0.5;
+    background-color: #95c11e;
+  }
+
+  #page1 #arrow i {
+    font-size: 30px;
+    font-weight: 500;
+    z-index: -111;
+  }
+
+  /* Page 2 */
+  #scroller #scroller-in h4{
+    font-size: 45px!important;
+  }
+
+  #page2 {
+    min-height: 70vh;
+    width: 100%;
+    z-index: 10;
+  }
+
+  /* Scroller */
+  #scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 100;
+    padding: 10px 0px!important;
+    margin: 10px 0px!important;
+  }
+
+  #scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  #scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 14s;  /* Faster scroll */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  #scroller h4 {
+    display: inline-block;
+    font-size: 55px;  /* Adjusted font size */
+    font-weight: 900;
+    font-family: sans-serif;
+    margin-right: 15px;
+    transition: all linear 0.4s;
+    color: #000;
+    -webkit-text-stroke: 2px #f8f0ee;
+  }
+
+  #scroller-in > h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* About Us Section */
+  #about-us {
+    height: 45vh!important;  /* Further reduced height */
+    width: 100%!important;
+    padding: 0 5px !important;  /* Further adjusted padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 10;
+  }
+
+  #about-us img {
+    height: 100px!important;  /* Smaller image size */
+    width: 85px!important;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  #about-us-in {
+    width: 65%!important;
+    text-align: center;
+    letter-spacing: 0.2cap;
+  }
+
+  #about-us-in h2 {
+    font-size: 18px!important;  /* Adjusted heading size */
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+
+  #about-us-in p {
+    font-size: 7px!important;  /* Smaller font size */
+    line-height: 10px!important;
+  }
+
+  /* Cards Container */
+  #cards-container {
+    height: 25vh!important;  /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;  /* Reduced gap */
+    position: relative;
+    z-index: 101;
+  }
+
+  .card {
+    height: 80%;
+    width: 25%;  /* Adjusted width */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    z-index: 99;
+  }
+
+  #card1 {
+    background-image: url(../img/card1.jpg);
+  }
+
+  #card2 {
+    background-image: url(../img/card2.jpg);
+  }
+
+  #card3 {
+    background-image: url(../img/card3.jpg);
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #99ca1b;
+    padding: 20px;
+    opacity: 0;
+    transition: all ease 1s;
+    z-index: 99;
+  }
+
+  .overlay h2 {
+    color: #000;
+  }
+
+  .overlay p {
+    color: #000;
+    line-height: 18px;
+  }
+
+  .overlay:hover {
+    opacity: 1;
+  }
+
+  .card:hover {
+    transform: rotate3d(-1, 1, 0, 15deg);
+  }
+
+  /* Green Div */
+  #green-div {
+    height: 12vh;  /* Adjusted height */
+    display: flex;
+    margin: 30px 0;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #a8da21, #42ac2e);
+  }
+
+  #green-div h3 {
+    width: 45% !important;
+    font-size: 14px!important;  /* Reduced font size */
+    line-height: 16px !important;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+  }
+
+  #green-div img {
+    height: 100%;
+    width: 14%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  /* Page 3 */
+  #page3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;  /* Adjusted padding */
+    position: relative;
+  }
+
+  #page3 p {
+    font-size: 10px!important;  /* Smaller font size */
+    width: 80% !important;
+    font-weight: 500;
+    line-height: 22px!important;
+    margin-bottom: 10px;
+  }
+
+  #page3 img {
+    height: 35px;  /* Reduced image size */
+    width: 35px;
+    object-fit: contain;
+  }
+
+  #page3 #colon1 {
+    left: 10%!important;
+    top: 15%!important;
+  }
+
+  #page3 #colon2 {
+    right: 10%!important;
+    bottom: 15%!important;
+  }
+
+  #page4 h1 {
+    font-size: 20px!important;  /* Adjusted font size */
+  }
+
+  .elem h2 {
+    text-align: center !important;
+    font-size: 12px !important;
+  }
+
+  /* Footer */
+  #footer {
+    height: 30vh !important;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px !important;  /* Adjusted padding */
+    gap: 1vw;  /* Reduced gap */
+    align-items: center;
+    background-color: #95c11e;
+    padding-bottom: 10px;
+  }
+
+  #f2 h3, #f3 h3, #f4 h4 {
+    font-size: 0.9vw!important; 
+    line-height: 8px!important; /* Smaller font size */
+  }
+
+  .tnc p {
+    font-size: 4px!important;  /* Slightly smaller font size */
+  }
+}
+
+
+/* 376px to 480px */
+@media (min-width: 376px) and (max-width: 480px) {
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: #fff;
+  }
+
+  *::selection {
+    background-color: #fff;
+    color: #95c11e;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    cursor: none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #95c11e;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 50px;
+  }
+
+  /* Navbar */
+  #nav {
+    height: 70px!important;  /* Adjusted height for smaller screens */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px!important;  /* Reduced padding */
+    gap: 20px !important;  /* Reduced gap */
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 999;
+  }
+
+  #nav img {
+    height: 8vw !important;  /* Smaller logo */
+  }
+
+  #nav h4 {
+    font-size: 1.8vw!important;  /* Adjusted font size for nav links */
+    text-align: center !important;
+  }
+
+  /* Cursor Effects */
+  #cursor {
+    height: 16px;  /* Smaller cursor */
+    width: 16px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+  }
+
+  #cursor-blur {
+    height: 160px;  /* Smaller blur effect */
+    width: 160px;
+    background-color: #96c11e6e;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(30px);
+    z-index: 9;
+  }
+
+  /* Video Background */
+  video {
+    object-fit: cover !important;
+    z-index: -1 !important;
+    position: fixed !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Main Section */
+  #main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Page 1 */
+  #page1 {
+    height: 100vh !important;
+    width: 100% !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+  }
+
+  #page1 h1 {
+    font-size: 8vw;  /* Reduced font size */
+    font-weight: 900;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  #page1 h1::before {
+    content: "Eat. Drink. Play.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    z-index: -1;
+    -webkit-text-stroke: 1px rgba(172, 255, 47, 0.616);
+  }
+
+  #page1 h4 {
+    font-size: 1.3rem;  /* Slightly smaller font size */
+    line-height: 1.66;
+    letter-spacing: 0.02em;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  #page1 p {
+    font-size: 12px;  /* Adjusted font size */
+    font-weight: 400;
+    position: relative;
+    max-width: 28rem;  /* Adjusted max-width */
+  }
+
+  #page1 #arrow {
+    height: 70px!important;
+    width: 70px!important;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    left: -3%;
+    bottom: 0%;
+    overflow: hidden;
+    border: 2px solid #89b218;
+    transition: all ease-in 0.5s;
+    z-index: -111;
+  }
+
+  #page1 #arrow:hover {
+    scale: 0.5;
+    background-color: #95c11e;
+  }
+
+  #page1 #arrow i {
+    font-size: 35px;
+    font-weight: 500;
+    z-index: -111;
+  }
+
+  /* Page 2 */
+  #scroller #scroller-in h4{
+    font-size: 50px!important;
+  }
+
+  #page2 {
+    min-height: 70vh;
+    width: 100%;
+    z-index: 10;
+  }
+
+  /* Scroller */
+  #scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 100;
+    padding: 12px 0px!important;
+    margin: 12px 0px!important;
+  }
+
+  #scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  #scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 18s;  /* Faster scroll */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  #scroller h4 {
+    display: inline-block;
+    font-size: 60px;  /* Adjusted font size */
+    font-weight: 900;
+    font-family: sans-serif;
+    margin-right: 20px;
+    transition: all linear 0.4s;
+    color: #000;
+    -webkit-text-stroke: 2px #f8f0ee;
+  }
+
+  #scroller-in > h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* About Us Section */
+  #about-us {
+    height: 50vh!important;  /* Further reduced height */
+    width: 100%!important;
+    padding: 0 10px !important;  /* Further adjusted padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 10;
+  }
+
+  #about-us img {
+    height: 110px!important;  /* Smaller image size */
+    width: 90px!important;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  #about-us-in {
+    width: 65%!important;
+    text-align: center;
+    letter-spacing: 0.2cap;
+  }
+
+  #about-us-in h2 {
+    font-size: 22px!important;  /* Adjusted heading size */
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+
+  #about-us-in p {
+    font-size: 8px!important;  /* Smaller font size */
+    line-height: 12px!important;
+  }
+
+  /* Cards Container */
+  #cards-container {
+    height: 30vh!important;  /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;  /* Reduced gap */
+    position: relative;
+    z-index: 101;
+  }
+
+  .card {
+    height: 80%;
+    width: 28%;  /* Adjusted width */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    z-index: 99;
+  }
+
+  #card1 {
+    background-image: url(../img/card1.jpg);
+  }
+
+  #card2 {
+    background-image: url(../img/card2.jpg);
+  }
+
+  #card3 {
+    background-image: url(../img/card3.jpg);
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #99ca1b;
+    padding: 20px;
+    opacity: 0;
+    transition: all ease 1s;
+    z-index: 99;
+  }
+
+  .overlay h2 {
+    color: #000;
+  }
+
+  .overlay p {
+    color: #000;
+    line-height: 20px;
+  }
+
+  .overlay:hover {
+    opacity: 1;
+  }
+
+  .card:hover {
+    transform: rotate3d(-1, 1, 0, 15deg);
+  }
+
+  /* Green Div */
+  #green-div {
+    height: 15vh;  /* Adjusted height */
+    display: flex;
+    margin: 40px 0;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #a8da21, #42ac2e);
+  }
+
+  #green-div h3 {
+    width: 50% !important;
+    font-size: 16px!important;  /* Reduced font size */
+    line-height: 18px !important;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+  }
+
+  #green-div img {
+    height: 100%;
+    width: 16%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  /* Page 3 */
+  #page3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;  /* Adjusted padding */
+    position: relative;
+  }
+
+  #page3 p {
+    font-size: 12px!important;  /* Smaller font size */
+    width: 75% !important;
+    font-weight: 500;
+    line-height: 26px!important;
+    margin-bottom: 15px;
+  }
+
+  #page3 img {
+    height: 40px;  /* Reduced image size */
+    width: 40px;
+    object-fit: contain;
+  }
+
+  #page3 #colon1 {
+    left: 10%!important;
+    top: 20%!important;
+  }
+
+  #page3 #colon2 {
+    right: 10%!important;
+    bottom: 20%!important;
+  }
+
+  #page4 h1 {
+    font-size: 22px!important;  /* Adjusted font size */
+  }
+
+  .elem h2 {
+    text-align: center !important;
+    font-size: 13px !important;
+  }
+
+  /* Footer */
+  #footer {
+    height: 35vh !important;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px !important;  /* Adjusted padding */
+    gap: 2vw;  /* Reduced gap */
+    align-items: center;
+    background-color: #95c11e;
+    padding-bottom: 15px;
+  }
+
+  #f2 h3, #f3 h3, #f4 h4 {
+    font-size: 1.0vw!important; 
+    line-height: 10px!important; /* Smaller font size */
+  }
+
+  .tnc p {
+    font-size: 5px!important;  /* Slightly smaller font size */
+  }
+}
+
+
+/* 481px to 640px */
+@media (min-width: 481px) and (max-width: 640px) {
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: #fff;
+  }
+
+  *::selection {
+    background-color: #fff;
+    color: #95c11e;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    cursor: none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #95c11e;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 50px;
+  }
+
+  /* Navbar */
+  #nav {
+    height: 80px!important;  /* Adjusted height for smaller screens */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px!important;  /* Reduced padding */
+    gap: 25px !important;  /* Reduced gap */
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 999;
+  }
+
+  #nav img {
+    height: 7vw !important;  /* Smaller logo */
+  }
+
+  #nav h4 {
+    font-size: 1.6vw!important;  /* Adjusted font size for nav links */
+    text-align: center !important;
+  }
+
+  /* Cursor Effects */
+  #cursor {
+    height: 18px;  /* Smaller cursor */
+    width: 18px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+  }
+
+  #cursor-blur {
+    height: 180px;  /* Smaller blur effect */
+    width: 180px;
+    background-color: #96c11e6e;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(30px);
+    z-index: 9;
+  }
+
+  /* Video Background */
+  video {
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Main Section */
+  #main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Page 1 */
+  #page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+  }
+
+  #page1 h1 {
+    font-size: 7vw;  /* Reduced font size */
+    font-weight: 900;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  #page1 h1::before {
+    content: "Eat. Drink. Play.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    z-index: -1;
+    -webkit-text-stroke: 1px rgba(172, 255, 47, 0.616);
+  }
+
+  #page1 h4 {
+    font-size: 1.4rem;  /* Slightly smaller font size */
+    line-height: 1.66;
+    letter-spacing: 0.02em;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  #page1 p {
+    font-size: 13px;  /* Adjusted font size */
+    font-weight: 400;
+    position: relative;
+    max-width: 30rem;  /* Adjusted max-width */
+  }
+
+  #page1 #arrow {
+    height: 80px!important;
+    width: 80px!important;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    left: -3%;
+    bottom: 0%;
+    overflow: hidden;
+    border: 2px solid #89b218;
+    transition: all ease-in 0.5s;
+    z-index: -111;
+  }
+
+  #page1 #arrow:hover {
+    scale: 0.5;
+    background-color: #95c11e;
+  }
+
+  #page1 #arrow i {
+    font-size: 40px;
+    font-weight: 500;
+    z-index: -111;
+  }
+
+  /* Page 2 */
+  #scroller #scroller-in h4{
+    font-size: 55px!important;
+  }
+
+  #page2 {
+    min-height: 70vh;
+    width: 100%;
+    z-index: 10;
+  }
+
+  /* Scroller */
+  #scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 100;
+    padding: 15px 0px!important;
+    margin: 15px 0px!important;
+  }
+
+  #scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  #scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 22s;  /* Faster scroll */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  #scroller h4 {
+    display: inline-block;
+    font-size: 65px;  /* Adjusted font size */
+    font-weight: 900;
+    font-family: sans-serif;
+    margin-right: 20px;
+    transition: all linear 0.4s;
+    color: #000;
+    -webkit-text-stroke: 2px #f8f0ee;
+  }
+
+  #scroller-in > h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* About Us Section */
+  #about-us {
+    height: 50vh!important;  /* Further reduced height */
+    width: 100%!important;
+    padding: 0 15px !important;  /* Further adjusted padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 10;
+  }
+
+  #about-us img {
+    height: 120px!important;  /* Smaller image size */
+    width: 100px!important;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  #about-us-in {
+    width: 65%!important;
+    text-align: center;
+    letter-spacing: 0.2cap;
+  }
+
+  #about-us-in h2 {
+    font-size: 25px!important;  /* Adjusted heading size */
+    font-weight: 900;
+    margin-bottom: 25px;
+  }
+
+  #about-us-in p {
+    font-size: 9px!important;  /* Smaller font size */
+    line-height: 14px!important;
+  }
+
+  /* Cards Container */
+  #cards-container {
+    height: 35vh!important;  /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;  /* Reduced gap */
+    position: relative;
+    z-index: 101;
+  }
+
+  .card {
+    height: 80%;
+    width: 30%;  /* Adjusted width */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    z-index: 99;
+  }
+
+  #card1 {
+    background-image: url(../img/card1.jpg);
+  }
+
+  #card2 {
+    background-image: url(../img/card2.jpg);
+  }
+
+  #card3 {
+    background-image: url(../img/card3.jpg);
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #99ca1b;
+    padding: 20px;
+    opacity: 0;
+    transition: all ease 1s;
+    z-index: 99;
+  }
+
+  .overlay h2 {
+    color: #000;
+  }
+
+  .overlay p {
+    color: #000;
+    line-height: 22px;
+  }
+
+  .overlay:hover {
+    opacity: 1;
+  }
+
+  .card:hover {
+    transform: rotate3d(-1, 1, 0, 15deg);
+  }
+
+  /* Green Div */
+  #green-div {
+    height: 18vh;  /* Adjusted height */
+    display: flex;
+    margin: 50px 0;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #a8da21, #42ac2e);
+  }
+
+  #green-div h3 {
+    width: 55% !important;
+    font-size: 18px!important;  /* Reduced font size */
+    line-height: 20px !important;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+  }
+
+  #green-div img {
+    height: 100%;
+    width: 18%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  /* Page 3 */
+  #page3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;  /* Adjusted padding */
+    position: relative;
+  }
+
+  #page3 p {
+    font-size: 14px!important;  /* Smaller font size */
+    width: 70% !important;
+    font-weight: 500;
+    line-height: 28px!important;
+    margin-bottom: 20px;
+  }
+
+  #page3 img {
+    height: 45px;  /* Reduced image size */
+    width: 45px;
+    object-fit: contain;
+  }
+
+  #page3 #colon1 {
+    left: 10%!important;
+    top: 21%!important;
+  }
+
+  #page3 #colon2 {
+    right: 10%!important;
+    bottom: 25%!important;
+  }
+
+  #page4 h1 {
+    font-size: 25px!important;  /* Adjusted font size */
+  }
+
+  .elem h2 {
+    text-align: center !important;
+    font-size: 15px !important;
+  }
+
+  /* Footer */
+  #footer {
+    height: 40vh !important;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px !important;  /* Adjusted padding */
+    gap: 3vw;  /* Reduced gap */
+    align-items: center;
+    background-color: #95c11e;
+    padding-bottom: 15px;
+  }
+
+  #f2 h3, #f3 h3, #f4 h4 {
+    font-size: 1.1vw!important; 
+    line-height: 12px!important; /* Smaller font size */
+  }
+
+  .tnc p {
+    font-size: 6px!important;  /* Slightly smaller font size */
+  }
+}
+
+
+/* 641px to 768px */
+@media (min-width: 641px) and (max-width: 768px) {
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: #fff;
+  }
+
+  *::selection {
+    background-color: #fff;
+    color: #95c11e;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    cursor: none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #95c11e;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 50px;
+  }
+
+  /* Navbar */
+  #nav {
+    height: 90px;  /* Reduced height for smaller screen */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px!important;  /* Further adjusted padding */
+    gap: 30px;  /* Reduced gap */
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 999;
+  }
+
+  #nav img {
+    height: 5vw;  /* Smaller logo */
+  }
+
+  #nav h4 {
+    font-size: 1.2vw!important;  /* Adjusted font size for nav links */
+  }
+
+  /* Cursor Effects */
+  #cursor {
+    height: 20px;  /* Smaller cursor */
+    width: 20px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+  }
+
+  #cursor-blur {
+    height: 200px;  /* Slightly smaller blur effect */
+    width: 200px;
+    background-color: #96c11e6e;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;
+  }
+
+  /* Video Background */
+  video {
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Main Section */
+  #main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Page 1 */
+  #page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+  }
+
+  #page1 h1 {
+    font-size: 6vw;  /* Reduced font size */
+    font-weight: 900;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  #page1 h1::before {
+    content: "Eat. Drink. Play.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    z-index: -1;
+    -webkit-text-stroke: 1px rgba(172, 255, 47, 0.616);
+  }
+
+  #page1 h4 {
+    font-size: 1.2rem;  /* Slightly smaller font size */
+    line-height: 1.66;
+    letter-spacing: 0.02em;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  #page1 p {
+    font-size: 14px;  /* Adjusted font size */
+    font-weight: 400;
+    position: relative;
+    max-width: 35rem;  /* Adjusted max-width */
+  }
+
+  #page1 #arrow {
+    height: 100px!important;
+    width: 100px!important;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    left: -2%;
+    bottom: 0%;
+    overflow: hidden;
+    border: 2px solid #89b218;
+    transition: all ease-in 0.5s;
+    z-index: -111;
+  }
+
+  #page1 #arrow:hover {
+    scale: 0.4;
+    background-color: #95c11e;
+  }
+
+  #page1 #arrow i {
+    font-size: 45px;
+    font-weight: 500;
+    z-index: -111;
+  }
+
+  /* Page 2 */
+  #scroller #scroller-in h4{
+    font-size: 60px!important;
+  }
+  #page2 {
+    min-height: 70vh;
+    width: 100%;
+    z-index: 10;
+  }
+
+  /* Scroller */
+  #scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 100;
+    padding: 20px 0px!important;
+    margin: 20px 0px!important;
+  }
+
+  #scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  #scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 25s;  /* Faster scroll */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  #scroller h4 {
+    display: inline-block;
+    font-size: 75px;  /* Adjusted font size */
+    font-weight: 900;
+    font-family: sans-serif;
+    margin-right: 20px;
+    transition: all linear 0.4s;
+    color: #000;
+    -webkit-text-stroke: 2px #f8f0ee;
+  }
+
+  #scroller-in > h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* About Us Section */
+  #about-us {
+    height: 60vh!important;  /* Slightly reduced height */
+    width: 100%!important;
+    padding: 0 30px;  /* Adjusted padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 10;
+  }
+
+  #about-us img {
+    height: 140px!important;  /* Smaller image size */
+    width: 110px!important;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  #about-us-in {
+    width: 65%!important;
+    text-align: center;
+    letter-spacing: 0.2cap;
+  }
+
+  #about-us-in h2 {
+    font-size: 28px !important;  /* Adjusted heading size */
+    font-weight: 900;
+    margin-bottom: 30px;
+  }
+
+  #about-us-in p {
+    font-size: 10px!important;  /* Slightly smaller font size */
+    line-height: 16px!important;
+  }
+
+  /* Cards Container */
+  #cards-container {
+    height: 55vh!important;  /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;  /* Adjusted gap */
+    position: relative;
+    z-index: 101;
+  }
+
+  .card {
+    height: 85%;
+    width: 30%;  /* Adjusted width */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    z-index: 99;
+  }
+
+  #card1 {
+    background-image: url(../img/card1.jpg);
+  }
+
+  #card2 {
+    background-image: url(../img/card2.jpg);
+  }
+
+  #card3 {
+    background-image: url(../img/card3.jpg);
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #99ca1b;
+    padding: 30px;
+    padding-top: 60px;
+    opacity: 0;
+    transition: all ease 1s;
+    z-index: 99;
+  }
+
+  .overlay h2 {
+    color: #000;
+  }
+
+  .overlay p {
+    color: #000;
+    line-height: 28px;
+  }
+
+  .overlay:hover {
+    opacity: 1;
+  }
+
+  .card:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+  }
+
+  /* Green Div */
+  #green-div {
+    height: 20vh;  /* Adjusted height */
+    display: flex;
+    margin: 60px 0;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #a8da21, #42ac2e);
+  }
+
+  #green-div h3 {
+    width: 50%;
+    font-size: 20px!important;  /* Smaller font size */
+    line-height: 28px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+  }
+
+  #green-div img {
+    height: 100%;
+    width: 20%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  /* Page 3 */
+  #page3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;  /* Adjusted padding */
+    position: relative;
+  }
+
+  #page3 p {
+    font-size: 15px!important;  /* Adjusted font size */
+    width: 60%;
+    font-weight: 500;
+    line-height: 30px!important;
+    margin-bottom: 20px;
+  }
+
+  #page3 img {
+    height: 50px;  /* Reduced image size */
+    width: 50px;
+    object-fit: contain;
+  }
+
+  #page3 #colon1 {
+    left: 15%!important;
+    top: 19%!important;
+  }
+
+  #page3 #colon2 {
+    right: 15%!important;
+    bottom: 19%!important;
+  }
+
+  #page4 h1 {
+    font-size: 35px!important;  /* Slightly smaller font size */
+  }
+
+  .elem h2 {
+    text-align: center !important;
+  }
+
+  /* Footer */
+  #footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;  /* Adjusted padding */
+    gap: 4vw;  /* Reduced gap */
+    align-items: center;
+    background-color: #95c11e;
+    padding-bottom: 15px;
+  }
+
+  #f2 h3, #f3 h3, #f4 h4 {
+    font-size: 1.05vw!important; 
+    line-height: 12px!important; /* Smaller font size */
+  }
+
+  .tnc p {
+    font-size: 7.5px!important;  /* Slightly smaller font size */
+  }
+}
+
+
+/* 769px to 960px */
+@media (min-width: 769px) and (max-width: 960px) {
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: #fff;
+  }
+  *::selection {
+    background-color: #fff;
+    color: #95c11e;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    cursor: none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #95c11e;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 50px;
+  }
+
+  /* Navbar */
+  #nav {
+    height: 110px;  /* Reduced height for smaller screen */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 30px!important;  /* Further adjusted padding */
+    gap: 40px;  /* Reduced gap */
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 999;
+  }
+
+  #nav img {
+    height: 4vw;  /* Smaller logo */
+  }
+
+  #nav h4 {
+    font-size: 1.4vw!important;  /* Adjusted font size for nav links */
+  }
+
+  /* Cursor Effects */
+  #cursor {
+    height: 22px;  /* Smaller cursor */
+    width: 22px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+  }
+
+  #cursor-blur {
+    height: 250px;  /* Slightly smaller blur effect */
+    width: 250px;
+    background-color: #96c11e6e;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(50px);
+    z-index: 9;
+  }
+
+  /* Video Background */
+  video {
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Main Section */
+  #main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Page 1 */
+  #page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+  }
+
+  #page1 h1 {
+    font-size: 5vw;  /* Reduced font size */
+    font-weight: 900;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  #page1 h1::before {
+    content: "Eat. Drink. Play.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    z-index: -1;
+    -webkit-text-stroke: 1px rgba(172, 255, 47, 0.616);
+  }
+
+  #page1 h4 {
+    font-size: 1.4rem;  /* Slightly smaller font size */
+    line-height: 1.66;
+    letter-spacing: 0.02em;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  #page1 p {
+    font-size: 16px;  /* Adjusted font size */
+    font-weight: 400;
+    position: relative;
+    max-width: 40rem;  /* Adjusted max-width */
+  }
+
+  #page1 #arrow {
+    height: 110px!important;
+    width: 110px!important;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    left: -2%;
+    bottom: 0%;
+    overflow: hidden;
+    border: 2px solid #89b218;
+    transition: all ease-in 0.5s;
+    z-index: -111;
+  }
+
+  #page1 #arrow:hover {
+    scale: 0.4;
+    background-color: #95c11e;
+  }
+
+  #page1 #arrow i {
+    font-size: 50px;
+    font-weight: 500;
+    z-index: -111;
+  }
+
+  /* Page 2 */
+  #scroller #scroller-in h4{
+    font-size: 70px!important;
+  }
+  #page2 {
+    min-height: 75vh;
+    width: 100%;
+    z-index: 10;
+  }
+
+  /* Scroller */
+  #scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 100;
+    padding: 10px 0px;
+  }
+
+  #scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  #scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;  /* Faster scroll */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  #scroller h4 {
+    display: inline-block;
+    font-size: 85px;  /* Adjusted font size */
+    font-weight: 900;
+    font-family: sans-serif;
+    margin-right: 20px;
+    transition: all linear 0.4s;
+    color: #000;
+    -webkit-text-stroke: 2px #f8f0ee;
+  }
+
+  #scroller-in > h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* About Us Section */
+  #about-us {
+    height: 70vh!important;  /* Slightly reduced height */
+    width: 100%!important;
+    padding: 0 40px;  /* Adjusted padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 10;
+  }
+
+  #about-us img {
+    height: 180px!important;  /* Smaller image size */
+    width: 180px!important;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  #about-us-in {
+    width: 70%!important;
+    text-align: center;
+    letter-spacing: 0.2cap;
+  }
+
+  #about-us-in h2 {
+    font-size: 30px;  /* Adjusted heading size */
+    font-weight: 900;
+    margin-bottom: 30px;
+  }
+
+  #about-us-in p {
+    font-size: 14px!important;  /* Slightly smaller font size */
+    line-height: 18px!important;
+  
+  }
+
+  /* Cards Container */
+  #cards-container {
+    height: 60vh!important;  /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;  /* Adjusted gap */
+    position: relative;
+    z-index: 101;
+  }
+
+  .card {
+    height: 85%;
+    width: 28%;  /* Adjusted width */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    z-index: 99;
+  }
+
+  #card1 {
+    background-image: url(../img/card1.jpg);
+  }
+
+  #card2 {
+    background-image: url(../img/card2.jpg);
+  }
+
+  #card3 {
+    background-image: url(../img/card3.jpg);
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #99ca1b;
+    padding: 30px;
+    padding-top: 60px;
+    opacity: 0;
+    transition: all ease 1s;
+    z-index: 99;
+  }
+
+  .overlay h2 {
+    color: #000;
+  }
+
+  .overlay p {
+    color: #000;
+    line-height: 28px;
+  }
+
+  .overlay:hover {
+    opacity: 1;
+  }
+
+  .card:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+  }
+
+  /* Green Div */
+  #green-div {
+    height: 22vh;  /* Adjusted height */
+    display: flex;
+    margin: 70px 0;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #a8da21, #42ac2e);
+  }
+
+  #green-div h3 {
+    width: 50%;
+    font-size: 22px;  /* Smaller font size */
+    line-height: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+  }
+
+  #green-div img {
+    height: 100%;
+    width: 22%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  /* Page 3 */
+  #page3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 35px;  /* Adjusted padding */
+    position: relative;
+  }
+
+  #page3 p {
+    font-size: 24px;  /* Adjusted font size */
+    width: 60%;
+    font-weight: 500;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  #page3 img {
+    height: 60px;  /* Reduced image size */
+    width: 60px;
+    object-fit: contain;
+  }
+
+  #page3 p {
+    font-size: 20px!important;  /* Slightly smaller font size */
+    line-height: 22px!important;
+  }
+
+  #page3 #colon1 {
+    left: 15%!important;
+    top: 12%!important;
+  }
+
+  #page3 #colon2 {
+    right: 15%!important;
+    bottom: 18%!important;
+  }
+
+  #page4 h1 {
+    font-size: 40px!important;  /* Slightly smaller font size */
+  }
+
+  .elem h2 {
+    text-align: center !important;
+  }
+
+  /* Footer */
+  #footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;  /* Adjusted padding */
+    gap: 5vw;  /* Reduced gap */
+    align-items: center;
+    background-color: #95c11e;
+    padding-bottom: 20px;
+  }
+
+  #f2 h3, #f3 h3, #f4 h4 {
+    font-size: 1.1vw;  /* Smaller font size */
+  }
+#f1 img{
+  height: 80px !important;
+}
+#f4 h4{
+  line-height: 12px!important;
+}
+  .tnc p {
+    font-size: 10px!important;  /* Slightly smaller font size */
+  }
+}
+
+
+/* 961px to 1024px */
+@media (min-width: 961px) and (max-width: 1024px) {
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: #fff;
+  }
+  *::selection {
+    background-color: #fff;
+    color: #95c11e;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    cursor: none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #95c11e;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 50px;
+  }
+
+  /* Navbar */
+  #nav {
+    height: 120px;  /* Further reduced height for smaller screen */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 50px!important;  /* Adjusted padding */
+    gap: 50px!important;  /* Reduced gap */
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 999;
+  }
+
+  #nav img {
+    height: 5vw;  /* Slightly smaller logo for smaller screens */
+  }
+
+  #nav h4 {
+    font-size: 1.4vw!important;  /* Smaller font for nav links */
+  }
+
+  /* Cursor Effects */
+  #cursor {
+    height: 24px;  /* Even smaller cursor */
+    width: 24px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+  }
+
+  #cursor-blur {
+    height: 300px;  /* Smaller blur effect */
+    width: 300px;
+    background-color: #96c11e6e;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(60px);
+    z-index: 9;
+  }
+
+  /* Video Background */
+  video {
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Main Section */
+  #main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);  /* Slightly more opaque for contrast */
+  }
+
+  /* Page 1 */
+  #page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+  }
+
+  #page1 h1 {
+    font-size: 6vw;  /* Reduced font size */
+    font-weight: 900;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  #page1 h1::before {
+    content: "Eat. Drink. Play.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    z-index: -1;
+    -webkit-text-stroke: 1px rgba(172, 255, 47, 0.616);
+  }
+
+  #page1 h4 {
+    font-size: 1.6rem;  /* Slightly smaller font size */
+    line-height: 1.66;
+    letter-spacing: 0.02em;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  #page1 p {
+    font-size: 18px;  /* Adjusted font size */
+    font-weight: 400;
+    position: relative;
+    max-width: 45rem;  /* Adjusted max-width */
+  }
+
+  #page1 #arrow {
+    height: 140px!important;
+    width: 140px!important;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    left: -2%;
+    bottom: 0%;
+    overflow: hidden;
+    border: 2px solid #89b218;
+    transition: all ease-in 0.5s;
+    z-index: -111;
+  }
+
+  #page1 #arrow:hover {
+    scale: 0.4;
+    background-color: #95c11e;
+  }
+
+  #page1 #arrow i {
+    font-size: 55px;
+    font-weight: 500;
+    z-index: -111;
+  }
+
+  /* Page 2 */
+  #page2 {
+    min-height: 75vh;
+    width: 100%;
+    z-index: 10;
+  }
+
+  /* Scroller */
+  #scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 100;
+    padding: 10px 0px;  /* Slightly reduced padding */
+  }
+
+  #scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  #scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 35s;  /* Slightly faster scroll */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  #scroller h4 {
+    display: inline-block;
+    font-size: 95px;  /* Adjusted font size */
+    font-weight: 900;
+    font-family: sans-serif;
+    margin-right: 20px;
+    transition: all linear 0.4s;
+    color: #000;
+    -webkit-text-stroke: 2px #f8f0ee;
+  }
+
+  #scroller-in > h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* About Us Section */
+  #about-us {
+    height: 60vh;  /* Slightly reduced height */
+    width: 100%;
+    padding: 0 50px;  /* Adjusted padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 10;
+  }
+
+  #about-us img {
+    height: 210px;  /* Reduced image size */
+    width: 210px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  #about-us-in {
+    width: 50%;
+    text-align: center;
+    letter-spacing: 0.2cap;
+  }
+
+  #about-us-in h2 {
+    font-size: 35px!important;  /* Reduced heading size */
+    font-weight: 900;
+    margin-bottom: 30px;
+  }
+
+  #about-us-in p {
+    font-size: 13px!important;  /* Slightly smaller text */
+    line-height: 22px;
+  }
+
+  /* Cards Container */
+  #cards-container {
+    height: 65vh;  /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;  /* Adjusted gap */
+    position: relative;
+    z-index: 101;
+  }
+
+  .card {
+    height: 90%;
+    width: 25%;  /* Adjusted width for better spacing */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    z-index: 99;
+  }
+
+  #card1 {
+    background-image: url(../img/card1.jpg);
+  }
+
+  #card2 {
+    background-image: url(../img/card2.jpg);
+  }
+
+  #card3 {
+    background-image: url(../img/card3.jpg);
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #99ca1b;
+    padding: 30px;
+    padding-top: 60px;
+    opacity: 0;
+    transition: all ease 1s;
+    z-index: 99;
+  }
+
+  .overlay h2 {
+    color: #000;
+  }
+
+  .overlay p {
+    color: #000;
+    line-height: 28px;
+  }
+
+  .overlay:hover {
+    opacity: 1;
+  }
+
+  .card:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+  }
+
+  /* Green Div */
+  #green-div {
+    height: 25vh;  /* Reduced height */
+    display: flex;
+    margin: 70px 0;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #a8da21, #42ac2e);
+  }
+
+  #green-div h3 {
+    width: 50%;
+    font-size: 26px;  /* Smaller font size */
+    line-height: 34px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+  }
+
+  #green-div img {
+    height: 100%;
+    width: 22%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  /* Page 3 */
+  #page3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;  /* Adjusted padding */
+    position: relative;
+  }
+
+  #page3 p {
+    font-size: 26px;  /* Adjusted font size */
+    width: 60%;
+    font-weight: 500;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  #page3 img {
+    height: 70px;  /* Reduced image size */
+    width: 70px;
+    object-fit: contain;
+  }
+
+  #page3 p{
+    font-size: 22px!important;
+  }
+
+  #page3 #colon1{
+    left: 18%!important;
+    top: 12%!important;  
+  }
+
+  #page3 #colon2{
+    right: 20%!important;
+    bottom:19%!important;  
+  }
+
+  #page4 h1{
+    font-size: 50px!important; 
+  }
+
+  .elem h2{
+    text-align: center!important;
+  }
+  /* Footer */
+  #footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;  /* Adjusted padding */
+    gap: 7vw;  /* Reduced gap */
+    align-items: center;
+    background-color: #95c11e;
+    padding-bottom: 20px;
+  }
+
+  #f2 h3, #f3 h3, #f4 h4 {
+    font-size: 1.2vw;  /* Smaller font size */
+  }
+
+  .tnc p {
+    font-size: 12px;  /* Slightly smaller font size */
+  }
+}
+
+
+/* 1025px to 1100px */
+@media (min-width: 1025px) and (max-width: 1100px) {
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: #fff;
+  }
+  
+  *::selection {
+    background-color: #fff;
+    color: #95c11e;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    cursor: none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #95c11e;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 50px;
+  }
+
+  /* Navbar */
+  #nav {
+    height: 130px;  /* Adjusted height for medium screen */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 100px;  /* Adjusted padding for medium-sized screens */
+    gap: 30px;
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 999;
+  }
+
+  #nav img {
+    height: 4vw;  /* Slightly smaller logo for medium screens */
+  }
+
+  #nav h4 {
+    font-size: 1.1vw;  /* Slightly smaller font for nav links */
+  }
+
+  /* Cursor Effects */
+  #cursor {
+    height: 28px;  /* Slightly smaller cursor */
+    width: 28px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+  }
+
+  #cursor-blur {
+    height: 350px;  /* Reduced blur effect */
+    width: 350px;
+    background-color: #96c11e6e;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(70px);
+    z-index: 9;
+  }
+
+  /* Video Background */
+  video {
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Main Section */
+  #main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);  /* Slightly more opaque for contrast */
+  }
+
+  /* Page 1 */
+  #page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+  }
+
+  #page1 h1 {
+    font-size: 5.5vw;  /* Slightly smaller font size */
+    font-weight: 900;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  #page1 h1::before {
+    content: "Eat. Drink. Play.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    z-index: -1;
+    -webkit-text-stroke: 1px rgba(172, 255, 47, 0.616);
+  }
+
+  #page1 h4 {
+    font-size: 1.4rem;  /* Adjusted font size */
+    line-height: 1.66;
+    letter-spacing: 0.02em;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  #page1 p {
+    font-size: 16px;  /* Smaller text for medium screen */
+    font-weight: 400;
+    position: relative;
+    max-width: 45rem;  /* Adjusted max-width */
+  }
+
+  #page1 #arrow {
+    height: 180px;
+    width: 180px;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    left: -2%;
+    bottom: 0%;
+    overflow: hidden;
+    border: 2px solid #89b218;
+    transition: all ease-in 0.5s;
+    z-index: -111;
+  }
+
+  #page1 #arrow:hover {
+    scale: 0.4;
+    background-color: #95c11e;
+  }
+
+  #page1 #arrow i {
+    font-size: 60px;
+    font-weight: 500;
+    z-index: -111;
+  }
+
+  /* Page 2 */
+  #page2 {
+    min-height: 75vh;
+    width: 100%;
+    z-index: 10;
+  }
+
+  /* Scroller */
+  #scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 100;
+    padding: 12px 0px;  /* Adjusted padding */
+  }
+
+  #scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  #scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  #scroller h4 {
+    display: inline-block;
+    font-size: 110px;  /* Slightly smaller font size */
+    font-weight: 900;
+    font-family: sans-serif;
+    margin-right: 20px;
+    transition: all linear 0.4s;
+    color: #000;
+    -webkit-text-stroke: 2px #f8f0ee;
+  }
+
+  #scroller-in > h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* About Us Section */
+  #about-us {
+    height: 65vh;
+    width: 100%;
+    padding: 0 60px;  /* Adjusted padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 10;
+  }
+
+  #about-us img {
+    height: 230px;  /* Adjusted size for medium screens */
+    width: 230px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  #about-us-in {
+    width: 50%;
+    text-align: center;
+    letter-spacing: 0.2cap;
+  }
+
+  #about-us-in h2 {
+    font-size: 45px;  /* Slightly smaller heading */
+    font-weight: 900;
+    margin-bottom: 40px;
+  }
+
+  #about-us-in p {
+    font-size: 18px;  /* Slightly smaller text */
+    line-height: 24px;
+  }
+
+  /* Cards Container */
+  #cards-container {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;  /* Reduced gap */
+    position: relative;
+    z-index: 101;
+  }
+
+  .card {
+    height: 95%;
+    width: 22%;  /* Adjusted width for better spacing */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    z-index: 99;
+  }
+
+  #card1 {
+    background-image: url(../img/card1.jpg);
+  }
+
+  #card2 {
+    background-image: url(../img/card2.jpg);
+  }
+
+  #card3 {
+    background-image: url(../img/card3.jpg);
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #99ca1b;
+    padding: 30px;
+    padding-top: 60px;
+    opacity: 0;
+    transition: all ease 1s;
+    z-index: 99;
+  }
+
+  .overlay h2 {
+    color: #000;
+  }
+
+  .overlay p {
+    color: #000;
+    line-height: 28px;
+  }
+
+  .overlay:hover {
+    opacity: 1;
+  }
+
+  .card:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+  }
+
+  /* Green Div */
+  #green-div {
+    height: 28vh;
+    display: flex;
+    margin: 80px 0;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #a8da21, #42ac2e);
+  }
+
+  #green-div h3 {
+    width: 50%;
+    font-size: 28px;  /* Adjusted font size */
+    line-height: 36px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+  }
+
+  #green-div img {
+    height: 100%;
+    width: 22%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  /* Page 3 */
+  #page3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;  /* Adjusted padding */
+    position: relative;
+  }
+
+  #page3 p {
+    font-size: 28px;  /* Slightly smaller font size */
+    width: 60%;
+    font-weight: 500;
+    line-height: 42px;
+    margin-bottom: 20px;
+  }
+
+  #page3 img {
+    height: 75px;  /* Smaller image size */
+    width: 75px;
+    object-fit: contain;
+  }
+
+  #page3 p{
+    font-size: 24px!important;
+  }
+
+  #page3 #colon1{
+    left: 17%!important;
+    top: 12%!important;  
+  }
+
+  #page3 #colon2{
+    right: 17%!important;
+    bottom:19%!important;  
+  }
+
+  #page4 h1{
+    font-size: 55px!important;
+  }
+
+  /* Footer */
+  #footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;  /* Adjusted padding */
+    gap: 8vw;  /* Reduced gap */
+    align-items: center;
+    background-color: #95c11e;
+    padding-bottom: 20px;
+  }
+
+  #f2 h3, #f3 h3, #f4 h4 {
+    font-size: 1.2vw;  /* Slightly smaller font size */
+  }
+
+  .tnc p {
+    font-size: 13px;  /* Slightly smaller font size */
+  }
+}
+
+
+
+/* 1101px to 1182px */
+@media (min-width: 1101px) and (max-width: 1182px) {
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: #fff;
+  }
+  
+  *::selection {
+    background-color: #fff;
+    color: #95c11e;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    cursor: none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #95c11e;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 50px;
+  }
+
+  /* Navbar */
+  #nav {
+    height: 130px;  /* Adjusted height for medium screen */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 120px;  /* Adjusted padding for medium-sized screens */
+    gap: 40px;
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 999;
+  }
+
+  #nav img {
+    height: 4vw;  /* Slightly smaller logo for medium screens */
+  }
+
+  #nav h4 {
+    font-size: 1.1vw;  /* Slightly smaller font for nav links */
+  }
+
+  /* Cursor Effects */
+  #cursor {
+    height: 28px;  /* Slightly smaller cursor */
+    width: 28px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+  }
+
+  #cursor-blur {
+    height: 350px;  /* Reduced blur effect */
+    width: 350px;
+    background-color: #96c11e6e;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(70px);
+    z-index: 9;
+  }
+
+  /* Video Background */
+  video {
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Main Section */
+  #main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);  /* Slightly more opaque for contrast */
+  }
+
+  /* Page 1 */
+  #page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+  }
+
+  #page1 h1 {
+    font-size: 5.5vw;  /* Slightly smaller font size */
+    font-weight: 900;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  #page1 h1::before {
+    content: "Eat. Drink. Play.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    z-index: -1;
+    -webkit-text-stroke: 1px rgba(172, 255, 47, 0.616);
+  }
+
+  #page1 h4 {
+    font-size: 1.4rem;  /* Adjusted font size */
+    line-height: 1.66;
+    letter-spacing: 0.02em;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  #page1 p {
+    font-size: 16px;  /* Smaller text for medium screen */
+    font-weight: 400;
+    position: relative;
+    max-width: 45rem;  /* Adjusted max-width */
+  }
+
+  #page1 #arrow {
+    height: 180px;
+    width: 180px;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    left: -2%;
+    bottom: 0%;
+    overflow: hidden;
+    border: 2px solid #89b218;
+    transition: all ease-in 0.5s;
+    z-index: -111;
+  }
+
+  #page1 #arrow:hover {
+    scale: 0.4;
+    background-color: #95c11e;
+  }
+
+  #page1 #arrow i {
+    font-size: 60px;
+    font-weight: 500;
+    z-index: -111;
+  }
+
+  /* Page 2 */
+  #page2 {
+    min-height: 75vh;
+    width: 100%;
+    z-index: 10;
+  }
+
+  /* Scroller */
+  #scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 100;
+    padding: 12px 0px;  /* Adjusted padding */
+  }
+
+  #scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  #scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  #scroller h4 {
+    display: inline-block;
+    font-size: 110px;  /* Slightly smaller font size */
+    font-weight: 900;
+    font-family: sans-serif;
+    margin-right: 20px;
+    transition: all linear 0.4s;
+    color: #000;
+    -webkit-text-stroke: 2px #f8f0ee;
+  }
+
+  #scroller-in > h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* About Us Section */
+  #about-us {
+    height: 65vh;
+    width: 100%;
+    padding: 0 80px;  /* Adjusted padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 10;
+  }
+
+  #about-us img {
+    height: 230px;  /* Adjusted size for medium screens */
+    width: 230px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  #about-us-in {
+    width: 50%;
+    text-align: center;
+    letter-spacing: 0.2cap;
+  }
+
+  #about-us-in h2 {
+    font-size: 45px;  /* Slightly smaller heading */
+    font-weight: 900;
+    margin-bottom: 40px;
+  }
+
+  #about-us-in p {
+    font-size: 18px;  /* Slightly smaller text */
+    line-height: 24px;
+  }
+
+  /* Cards Container */
+  #cards-container {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;  /* Reduced gap */
+    position: relative;
+    z-index: 101;
+  }
+
+  .card {
+    height: 95%;
+    width: 22%;  /* Adjusted width for better spacing */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    z-index: 99;
+  }
+
+  #card1 {
+    background-image: url(../img/card1.jpg);
+  }
+
+  #card2 {
+    background-image: url(../img/card2.jpg);
+  }
+
+  #card3 {
+    background-image: url(../img/card3.jpg);
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #99ca1b;
+    padding: 30px;
+    padding-top: 60px;
+    opacity: 0;
+    transition: all ease 1s;
+    z-index: 99;
+  }
+
+  .overlay h2 {
+    color: #000;
+  }
+
+  .overlay p {
+    color: #000;
+    line-height: 28px;
+  }
+
+  .overlay:hover {
+    opacity: 1;
+  }
+
+  .card:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+  }
+
+  /* Green Div */
+  #green-div {
+    height: 28vh;
+    display: flex;
+    margin: 80px 0;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #a8da21, #42ac2e);
+  }
+
+  #green-div h3 {
+    width: 50%;
+    font-size: 28px;  /* Adjusted font size */
+    line-height: 36px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+  }
+
+  #green-div img {
+    height: 100%;
+    width: 22%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  /* Page 3 */
+  #page3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;  /* Adjusted padding */
+    position: relative;
+  }
+
+  #page3 p {
+    font-size: 28px;  /* Slightly smaller font size */
+    width: 60%;
+    font-weight: 500;
+    line-height: 42px;
+    margin-bottom: 20px;
+  }
+
+  #page3 img {
+    height: 75px;  /* Smaller image size */
+    width: 75px;
+    object-fit: contain;
+  }
+  #page3 p{
+    font-size: 24px!important;
+  }
+  #page3 #colon1{
+    left: 17%!important;
+    top: 12%!important;  
+  }
+  #page3 #colon2{
+    right: 17%!important;
+    bottom:19%!important;  
+  }
+
+#page4 h1{
+  font-size: 60px!important;
+}
+
+  /* Footer */
+  #footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 120px;  /* Adjusted padding */
+    gap: 8vw;  /* Reduced gap */
+    align-items: center;
+    background-color: #95c11e;
+    padding-bottom: 20px;
+  }
+
+  #f2 h3, #f3 h3, #f4 h4 {
+    font-size: 1.2vw;  /* Slightly smaller font size */
+  }
+
+  .tnc p {
+    font-size: 13px;  /* Slightly smaller font size */
+  }
+}
+
+
+
+/* 1183px to 1920px */
+@media (min-width: 1183px) and (max-width: 1920px) {
+  
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    color: #fff;
+  }
+  
+  *::selection {
+    background-color: #fff;
+    color: #95c11e;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    cursor: none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #95c11e;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 50px;
+  }
+
+  /* Navbar */
+  #nav {
+    height: 150px;  /* Adjusted height for larger screen */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 180px;  /* Increased padding for wider screens */
+    gap: 50px;
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 999;
+  }
+
+  #nav img {
+    height: 3.5vw;  /* Adjusted size of the logo */
+  }
+
+  #nav h4 {
+    font-size: 1.2vw;  /* Increased font size for navigation links */
+  }
+
+  /* Cursor Effects */
+  #cursor {
+    height: 30px;  /* Larger cursor for better visibility */
+    width: 30px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+  }
+
+  #cursor-blur {
+    height: 400px;  /* Increased blur effect */
+    width: 400px;
+    background-color: #96c11e6e;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(80px);
+    z-index: 9;
+  }
+
+  /* Video Background */
+  video {
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Main Section */
+  #main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);  /* Slightly more opaque for contrast */
+  }
+
+  /* Page 1 */
+  #page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+  }
+
+  #page1 h1 {
+    font-size: 5vw;  /* Larger font for headers */
+    font-weight: 900;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  #page1 h1::before {
+    content: "Eat. Drink. Play.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    z-index: -1;
+    -webkit-text-stroke: 1px rgba(172, 255, 47, 0.616);
+  }
+
+  #page1 h4 {
+    font-size: 1.5rem;  /* Larger subheading */
+    line-height: 1.66;
+    letter-spacing: 0.02em;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  #page1 p {
+    font-size: 18px;  /* Larger paragraph text */
+    font-weight: 400;
+    position: relative;
+    max-width: 50rem;  /* Increased max-width */
+  }
+
+  #page1 #arrow {
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    left: -2%;
+    bottom: 0%;
+    overflow: hidden;
+    border: 2px solid #89b218;
+    transition: all ease-in 0.5s;
+    z-index: -111;
+  }
+
+  #page1 #arrow:hover {
+    scale: 0.4;
+    background-color: #95c11e;
+  }
+
+  #page1 #arrow i {
+    font-size: 70px;
+    font-weight: 500;
+    z-index: -111;
+  }
+
+  /* Page 2 */
+  #page2 {
+    min-height: 80vh;
+    width: 100%;
+    z-index: 10;
+  }
+
+  /* Scroller */
+  #scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 100;
+    padding: 13.500px 0px;
+  }
+
+  #scroller::-webkit-scrollbar {
+    display: none;
+  }
+
+  #scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  #scroller h4 {
+    display: inline-block;
+    font-size: 120px;  /* Increased font size */
+    font-weight: 900;
+    font-family: sans-serif;
+    margin-right: 20px;
+    transition: all linear 0.4s;
+    color: #000;
+    -webkit-text-stroke: 2px #f8f0ee;
+  }
+
+  #scroller-in > h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* About Us Section */
+  #about-us {
+    height: 70vh;
+    width: 100%;
+    padding: 0 100px;  /* Increased padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 10;
+  }
+
+  #about-us img {
+    height: 250px;  /* Larger images */
+    width: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  #about-us-in {
+    width: 50%;
+    text-align: center;
+    letter-spacing: 0.2cap;
+  }
+
+  #about-us-in h2 {
+    font-size: 50px;  /* Larger heading */
+    font-weight: 900;
+    margin-bottom: 40px;
+  }
+
+  #about-us-in p {
+    font-size: 20px;  /* Larger paragraph text */
+    line-height: 26px;
+  }
+
+  /* Cards Container */
+  #cards-container {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;  /* Increased gap */
+    position: relative;
+    z-index: 101;
+  }
+
+  .card {
+    height: 97%;
+    width: 20%;  /* Reduced width for better spacing */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+    z-index: 99;
+  }
+
+  #card1 {
+    background-image: url(../img/card1.jpg);
+  }
+
+  #card2 {
+    background-image: url(../img/card2.jpg);
+  }
+
+  #card3 {
+    background-image: url(../img/card3.jpg);
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #99ca1b;
+    padding: 30px;
+    padding-top: 60px;
+    opacity: 0;
+    transition: all ease 1s;
+    z-index: 99;
+  }
+
+  .overlay h2 {
+    color: #000;
+  }
+
+  .overlay p {
+    color: #000;
+    line-height: 28px;
+  }
+
+  .overlay:hover {
+    opacity: 1;
+  }
+
+  .card:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+  }
+
+  /* Green Div */
+  #green-div {
+    height: 30vh;
+    display: flex;
+    margin: 100px 0;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #a8da21, #42ac2e);
+  }
+
+  #green-div h3 {
+    width: 50%;
+    font-size: 30px;  /* Larger text */
+    line-height: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+  }
+
+  #green-div img {
+    height: 100%;
+    width: 20%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  /* Page 3 */
+  #page3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    position: relative;
+  }
+
+  #page3 p {
+    font-size: 30px;  /* Larger font size */
+    width: 60%;
+    font-weight: 500;
+    line-height: 45px;
+    margin-bottom: 20px;
+  }
+
+  #page3 img {
+    height: 80px; /* Larger image */
+    width: 80px;
+    object-fit: contain;
+  }
+  #page4 > h1{
+    font-size: 65px!important;
+  }
+
+
+  /* Footer */
+  #footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 150px;  /* Increased padding */
+    gap: 10vw;  /* More spacing */
+    align-items: center;
+    background-color: #95c11e;
+    padding-bottom: 20px;
+  }
+
+  #f2 h3, #f3 h3, #f4 h4 {
+    font-size: 1.4vw;  /* Increased font size */
+  }
+
+  .tnc p {
+    font-size: 14px;  /* Slightly larger font size for legal text */
+  }
+}

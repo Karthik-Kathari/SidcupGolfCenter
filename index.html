@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animating Website</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+  <link rel="stylesheet" href="./assets/css/mediaquery.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div id="nav">
+    <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg" alt="">
+    <h4>Toptracer Range</h4>
+    <h4>Golf Lessons</h4>
+    <h4>Adventure Golf</h4>
+    <h4>Café</h4>
+    <h4>Leagues</h4>
+  </div>
+  <div id="cursor"></div>
+  <div id="cursor-blur"></div>
+  <video autoplay loop muted src="assets/img/hero.mp4"></video>
+
+  <div id="main">
+    <div id="page1">
+      <h1>Eat. Drink. Play.</h1>
+      <h4>Welcome to Sidcup Family Golf!</h4>
+      <p>Sidcup Family Golf is a Toptracer driving range and crazy golf venue in Sidcup, South East London. Passionate
+        about technology, player development and making golf fun and accessible to everyone.</p>
+      <div id="arrow">
+        <i class="ri-arrow-down-line"></i>
+      </div>
+    </div>
+    <div id="page2">
+      <!-- scroller -->
+      <div id="scroller">
+        <div id="scroller-in">
+          <h4 data-text="CRAZY GOLF">CRAZY GOLF</h4>
+          <h4 data-text="COFFEE SHOP">COFFEE SHOP</h4>
+          <h4 data-text="TOPTRACER RANGE">TOPTRACER RANGE</h4>
+          <h4 data-text="GOLF LESSONS">GOLF LESSONS</h4>
+        </div>
+        <div id="scroller-in">
+          <h4 data-text="CRAZY GOLF">CRAZY GOLF</h4>
+          <h4 data-text="COFFEE SHOP">COFFEE SHOP</h4>
+          <h4 data-text="TOPTRACER RANGE">TOPTRACER RANGE</h4>
+          <h4 data-text="GOLF LESSONS">GOLF LESSONS</h4>
+        </div>
+      </div>
+      <!-- aboutus -->
+      <div id="about-us">
+        <img src="assets/img/page2-left.jpg" alt="">
+        <div id="about-us-in">
+          <h2>ABOUT US</h2>
+          <p>Home to a 46-bay, multi-tier, floodlit driving range, powered by Toptracer Range technology. Complimented
+            by
+            a practice green and bunker, coffee shop and American Golf Store. There truly is something for everyone as
+            we
+            also boast two outdoor 18-hole dinosaur themed crazy golf courses.
+
+            Please note: we are a cashless venue. The range closes at 10pm with last balls at 9pm.</p>
+        </div>
+        <img src="assets/img/page2-right.jpg" alt="">
+      </div>
+      <!-- cards -->
+      <div id="cards-container">
+        <div class="card" id="card1">
+          <div class="overlay">
+            <h2>TOPTRACER RANGE</h2>
+            <p> Our range delivers the same ball-
+              tracking technology that traces the
+              shots of the game's best players on
+              TV.
+              Toptracer Range technology offers
+              a fun, engaging, tech-driven
+              experience that appeals to
+              seasoned players, range rivals,
+              friends, family members, and even
+              first-time golfers.</p>
+          </div>
+        </div>
+        <div class="card" id="card2">
+          <div class="overlay">
+            <h2>ADVENTURE GOLF</h2>
+            <p>Adventure awaits you!
+              Become a Jurassic explorer as you
+              delve into the land of the
+              dinosaurs! Putt your way through
+              prehistoric landscape, cascading
+              waterfalls and meet some dinosaur
+              friends along the way.</p>
+          </div>
+        </div>
+        <div class="card" id="card3">
+
+          <div class="overlay">
+            <h2>GOLF LESSONS</h2>
+            <p>Passionate about player
+              development, whether you are
+              new to the game or an aspiring
+              pro, we offer both group and
+              individual lessons tailored to you
+              with the sole focus of helping you
+              reach your goals.</p>
+          </div>
+        </div>
+      </div>
+      <div id="green-div">
+        <img src="assets/img/dots-side-.png" alt="">
+        <h3>Sign up for Sidcup News and Special Offers
+          Straight to Your Inbox</h3>
+        <img src="assets/img/dots-side-.png" alt="">
+      </div>
+    </div>
+    <div id="page3">
+      <p>I absolutely love the adventure golf here. It seems every time I come they’ve added a new feature. My mum and I
+        usually come together and it’s such a laugh. The designs for the holes are creative and the two different
+        courses makes it more fun as you can complete both and compare your scores!</p>
+      <img id="colon1" src="assets/img/quote-left- (1).png" alt="">
+      <img id="colon2" src="assets/img/quote-left- (2).png" alt="">
+    </div>
+    <div id="page4">
+      <h1>WHAT ARE YOU WAITING FOR?</h1>
+      <div class="elem">
+        <h2>TOPTRACER RANGE</h2>
+        <img src="assets/img/box1-img1.png" alt="">
+      </div>
+      <div class="elem">
+        <h2>GOLF LESSONS</h2>
+        <img src="assets/img/box2-img2.png" alt="">
+      </div>
+      <div class="elem">
+        <h2>ADVENTURE GOLF</h2>
+        <img src="assets/img/box3-img3.png" alt="">
+      </div>
+    </div>
+    <div id="footer">
+      <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-footer.svg" alt="" />
+      <div id="f1">
+        <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg" alt="" />
+      </div>
+      <div id="f2">
+        <h3>TOPTRACER Ranges</h3>
+        <h3>Golf Lessons</h3>
+        <h3>Adventure Golf</h3>
+      </div>
+      <div id="f3">
+        <h3>coffee shop</h3>
+        <h3>LEAGUES</h3>
+        <h3>Contact us</h3>
+      </div>
+      <div id="f4">
+        <h4>
+          A20, SIDCUP BYPASS <br />
+          CHISLEHURST <br />
+          KENT <br />
+          BR7 6RP <br />
+          TEL: 0208 309 0181 <br />
+          GET DIRECTIONS <br />
+        </h4>
+      </div>
+      <div class="tnc">
+        <p>Copyright © 2023 Adventure Leisure Ltd. All rights reserved. | Privacy Policy | Terms And Conditions | Gender
+          Pay Gap| Web Design London</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- </div> -->
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
