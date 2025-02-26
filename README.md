@@ -9,8 +9,10 @@ Café & Leagues: Information on the on-site café and golf leagues.
 Smooth Animations: Enhanced with GSAP for seamless animations and scroll-triggered effects.
 
 # Technologies:
-HTML5, CSS3, JavaScript
-GSAP (GreenSock Animation Platform) for animations
+- HTML5, 
+- CSS3, 
+- JavaScript
+- GSAP (GreenSock Animation Platform) for animations
 Responsive design for both desktop and mobile
 
 This clone effectively mirrors the original site’s user-friendly layout, combining sleek visuals, interactivity, and clear navigation. With an emphasis on user experience, the website delivers information efficiently while also showcasing the venue’s modern amenities in an engaging manner.
