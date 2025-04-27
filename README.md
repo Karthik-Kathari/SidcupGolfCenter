@@ -1,4 +1,4 @@
-https://github.com/Karthik-Kathari/SidcupGolfCenter/blob/da19b5fc8022772adf2e35ed117814429dc3dd8c/sidegolf_img.png
+![image alt](https://github.com/Karthik-Kathari/SidcupGolfCenter/blob/da19b5fc8022772adf2e35ed117814429dc3dd8c/sidegolf_img.png)
 
 # SidcupGolfCenter
 A clone of the Sidcup Family Golf website, showcasing a Toptracer driving range, adventure golf, lessons, café, and leagues. It features smooth GSAP animations and responsive design for both desktop and mobile. Built with HTML, CSS, and JavaScript, this project focuses on modern web design and user engagement.
